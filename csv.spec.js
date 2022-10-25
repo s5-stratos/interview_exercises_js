@@ -15,7 +15,7 @@ describe('csv', function () {
                 ]
             )
         });
-        it('should parse "csv" with custom delimiter', function () {
+        xit('should parse "csv" with custom delimiter', function () {
             const str = slurp('basic_pipe.csv');
             const result = csv.parse(str, {delim: '|'});
             assert.deepEqual(
@@ -28,11 +28,11 @@ describe('csv', function () {
                 ]
             )
         });
-        it('should reject csv with non-uniform row width', function () {
+        xit('should reject csv with non-uniform row width', function () {
             const str = slurp('basic_ragged.csv');
             assert.throws(() => csv.parse(str));
         });
-        it('should parse csv to records', function () {
+        xit('should parse csv to records', function () {
             const str = slurp('basic_pipe.csv');
             const result = csv.parseRecords(str, {delim: '|'});
             assert.deepEqual(
@@ -44,7 +44,7 @@ describe('csv', function () {
                 ]
             )
         });
-        it('should parse quoted csv', function () {
+        xit('should parse quoted csv', function () {
             const str = slurp('quoted.csv');
             const result = csv.parse(str);
             assert.deepEqual(
